@@ -10,7 +10,11 @@ const InputForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     try {
-      setOutput(`${input} ${inputFrom} = ${convert(input).from(inputFrom).to(inputTo)}${inputTo}`);
+      setOutput(
+        `${input} ${inputFrom} = ${convert(input)
+          .from(inputFrom)
+          .to(inputTo)}${inputTo}`
+      );
     } catch (e) {
       setOutput(
         `Error: Please make sure you perform the correct conversion.\nError message: ${e}`
